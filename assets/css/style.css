@@ -1,0 +1,282 @@
+/* =========================================================
+   RESET & GLOBAL BASE
+========================================================= */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", system-ui, sans-serif;
+    background: #f5ebe1;
+    color: #3b2a1a;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img { max-width: 100%; display: block; }
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 24px 16px 40px;
+}
+
+/* =========================================================
+   TOP BAR
+========================================================= */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.top-bar h1 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.top-actions { display: flex; gap: 8px; }
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    padding: 8px 18px;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: 0.15s ease;
+}
+
+.btn-small { padding: 6px 14px; font-size: 13px; }
+
+.btn-primary {
+    background: #c87433;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: #b86628;
+    transform: translateY(-1px);
+}
+
+.btn-secondary {
+    background: #faf6f2;
+    color: #6a4e33;
+    border: 1px solid #e1d6ce;
+}
+
+.btn-secondary:hover {
+    background: #f0e7df;
+}
+
+/* =========================================================
+   CARD COMPONENT
+========================================================= */
+.card {
+    background: #fff8f1;
+    padding: 20px 24px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow:
+        0 12px 28px rgba(175,125,77,0.2),
+        0 0 0 1px rgba(255,255,255,0.8) inset;
+}
+
+/* =========================================================
+   ROLE BACKGROUNDS
+========================================================= */
+body.employee { background: #f7f2ec; }
+body.manager  { background: #f0ece7; }
+body.ceo      { background: #efe9e1; }
+
+/* =========================================================
+   CALENDAR GRID
+========================================================= */
+.cal-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 6px;
+    margin-top: 18px;
+}
+
+.cal-grid-header {
+    text-align: center;
+    font-size: 13px;
+    font-weight: 700;
+    padding-bottom: 4px;
+    color: #5b4634;
+    border-bottom: 1px solid #d7c9bc;
+}
+
+.cal-cell {
+    background: #fffdf9;
+    padding: 8px 10px;
+    border-radius: 12px;
+    min-height: 90px;
+    position: relative;
+    border: 1px solid #eadfd5;
+}
+
+.cal-cell--muted {
+    opacity: 0.55;
+    background: #f3eee8;
+}
+
+.cal-cell--today {
+    border: 2px solid #c87433;
+}
+
+.cal-cell--off {
+    background: #f0f0f0;
+}
+
+.cal-cell--holiday {
+    background: #ffeceb;
+}
+
+/* Date Number */
+.cal-cell-date {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #3b2a1a;
+}
+
+/* =========================================================
+   CALENDAR PILLS (shift, holiday, theme day)
+========================================================= */
+.cal-pill {
+    padding: 4px 8px;
+    border-radius: 8px;
+    font-size: 11px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    display: inline-block;
+}
+
+.cal-pill-shift {
+    background: #f9e2cc;
+    color: #5e3a1a;
+}
+
+.cal-pill-off {
+    background: #e0e0e0;
+    color: #555;
+}
+
+.cal-pill-holiday {
+    background: #ffd1d1;
+    color: #8a1d1d;
+    border: 1px solid #ffb6b6;
+}
+
+.cal-pill-theme {
+    background: #d9edff;
+    color: #1d3d6b;
+    border: 1px solid #bcdcff;
+}
+
+/* =========================================================
+   MONTH NAVIGATION
+========================================================= */
+.cal-nav-btn {
+    background: #fff;
+    border: 1px solid #e3d6cd;
+    border-radius: 8px;
+    padding: 4px 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.cal-nav-btn:hover {
+    background: #f0e8e2;
+}
+
+.schedule-header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.schedule-month-label {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.schedule-subtitle {
+    font-size: 14px;
+    margin-top: 6px;
+    color: #5c4b3b;
+}
+
+/* =========================================================
+   TEAM MEMBER TABLE (only managers/CEO see this)
+========================================================= */
+.table-wrapper {
+    overflow-x: auto;
+}
+
+.ipx-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 14px;
+}
+
+.ipx-table th {
+    text-align: left;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 8px;
+    background: #f5e8dd;
+    border-bottom: 2px solid #e8d7ca;
+}
+
+.ipx-table td {
+    padding: 8px;
+    border-bottom: 1px solid #ecdcd2;
+    font-size: 14px;
+}
+
+/* =========================================================
+   DEPARTMENT BADGES
+========================================================= */
+.dept-badge {
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #3b2a1a;
+    display: inline-block;
+}
+
+/* Department Colors */
+.dept-d001 { background: #A7BCC7; } /* Web Dev */
+.dept-d002 { background: #C4B3D9; } /* Game Studio */
+.dept-d003 { background: #D8A8A8; } /* UI/UX */
+.dept-d004 { background: #CFAE84; } /* Platform */
+.dept-d005 { background: #B9ADA4; } /* Business Ops */
+.dept-d006 { background: #7A8290; } /* Cybersecurity */
+.dept-d007 { background: #BAC9D3; } /* Cloud */
+.dept-d008 { background: #DDBA6E; } /* ML / AI */
+.dept-d009 { background: #E6C4AB; } /* Mobile */
+.dept-d010 { background: #C6D6C1; } /* Data Science */
+.dept-d011 { background: #D4D6D5; } /* IT Support */
+.dept-d012 { background: #E6E2DD; } /* QA */
+.dept-d013 { background: #8A8F96; } /* Networking */
