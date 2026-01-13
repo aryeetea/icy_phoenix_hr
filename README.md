@@ -84,10 +84,11 @@ This repository represents the design, structure, and implementation approach of
 ---
 
 ## Authors
- Fatiat Obayomi
- Information Technology
- UI/UX Design focus
- 
+
 Aileen Aryeetey  
 Information Technology Graduate  
-UI/UX Design and  Focus
+UI/UX Design Focus
+
+Fatiat Obayomi
+Information Technology Graduate
+UI/UX Design focus
